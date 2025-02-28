@@ -28,16 +28,16 @@ export default function ResultsPage({ score, totalQuestions, onReset }: ResultsP
     icon = <Award className="text-blue-400" size={28} />
   }
 
+  function randomInRange(min: number, max: number) {
+    return Math.random() * (max - min) + min
+  }
+
   useEffect(() => {
     if (percentage === 100) {
       // Trigger confetti for perfect score
       const duration = 3 * 1000
       const animationEnd = Date.now() + duration
       const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
-
-      function randomInRange(min: number, max: number) {
-        return Math.random() * (max - min) + min
-      }
 
       const interval: any = setInterval(() => {
         const timeLeft = animationEnd - Date.now()
