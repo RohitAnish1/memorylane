@@ -39,7 +39,7 @@ export default function ResultsPage({ score, totalQuestions, onReset }: ResultsP
       const animationEnd = Date.now() + duration
       const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 }
 
-      const interval: any = setInterval(() => {
+      const interval: NodeJS.Timeout = setInterval(() => {
         const timeLeft = animationEnd - Date.now()
 
         if (timeLeft <= 0) {
@@ -107,8 +107,9 @@ export default function ResultsPage({ score, totalQuestions, onReset }: ResultsP
           transition={{ delay: 1.5, duration: 1 }}
           className="text-sm text-gray-500 italic"
         >
-          "Love is not about how many days, months, or years you have been together. Love is about how much you love
-          each other every single day."
+          &quot;Love is not about how many days, months, or years you have been together. Love is about how much you love
+each other every single day.&quot;
+
         </motion.div>
       </div>
     </motion.div>

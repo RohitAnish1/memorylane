@@ -25,8 +25,9 @@ export default function LandingPage({ onStart }: LandingPageProps) {
       </motion.div>
 
       <h1 className="text-3xl md:text-4xl font-serif text-pink-500 leading-tight">
-        A little journey through our memories ❤️
-      </h1>
+  A little journey through our memories &hearts;
+</h1>
+
 
       <p className="text-gray-600 font-light">Let's see how well you remember our special moments together</p>
 

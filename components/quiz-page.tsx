@@ -28,6 +28,8 @@ export default function QuizPage({
   totalQuestions,
   selectedAnswer,
 }: QuizPageProps) {
+  // Ensure showSparkles is used correctly
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showSparkles, setShowSparkles] = useState<number | null>(null)
 
   useEffect(() => {
@@ -93,7 +95,7 @@ export default function QuizPage({
               {choice}
 
               {/* Sparkles animation for correct answer */}
-              {isCorrect(index) && (
+              {showSparkles !== null && isCorrect(showSparkles) && (
                 <AnimatePresence>
                   {Array.from({ length: 8 }).map((_, i) => (
                     <motion.div
@@ -134,4 +136,3 @@ export default function QuizPage({
     </motion.div>
   )
 }
-
