@@ -29,7 +29,9 @@ export default function LandingPage({ onStart }: LandingPageProps) {
 </h1>
 
 
-      <p className="text-gray-600 font-light">Let's see how well you remember our special moments together</p>
+<p className="text-gray-600 font-light">
+        Let&apos;s see how well you remember our special moments together
+      </p>
 
       <motion.button
         className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-400 to-pink-300 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
